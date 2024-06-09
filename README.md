@@ -11,6 +11,9 @@ Al querer empezar por el pirncipio y dedicarme a hackear las máquinas MUY FÁCI
   <img src="imgs/error_script_dockerlabs.es.png">
 </p>
 
+>[!NOTE]
+> Aquí aprovecho para aclarar que en mi caso concreto uso un Mac con chip M1 y el entorno virtual en el cual hago correr Kali Linux es en <a href="https://github.com/utmapp/UTM">UTM</a>, un emulador de sistema con todas las funciones y un host de máquina virtual para iOS y macOS. Está basado en QEMU, por si más adelante en el post os preguntais el porqué del comando lanzado en la terminal.
+
 Después de mucho investigar y preguntar en discord (quiero dar las gracias <b>condor777</b> aquí también por echarme un cable con esto) no acababa de dar con la tecla adecuada.
 En algun foro de StackOverflow vi que se mencionaba el hecho de "forzar" la aqruitectura correcta a la hora de llamar el contenedor, esto se haria con ```--platform linux/amd64```, pero tampoco resultó ser muy útil, ya que si que es cierto que en algun momento me daba la IP, pero no era consistente.
 
