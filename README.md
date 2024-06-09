@@ -61,7 +61,7 @@ Como veis tengo comentadas algunas líneas, es por el testing que estuve haciend
   <img src="imgs/error_script_dockerlabs.es_4.png">
 </p>
 
-Y con esto ya no vereis más el warning y ya podeis empezar a hackear máquinas!!<br>
+Y con esto ya no vereis más el warning y ya podeis empezar a hackear máquinas en ```dockerlabs.es``` !!<br>
 Gracias!! 😎
 
 >[!NOTE]
