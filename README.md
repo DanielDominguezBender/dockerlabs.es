@@ -21,8 +21,9 @@ Rebuscando, y ahora pienso que deberia haber ido ahi directamente, en la web de 
 
 ```
 QEMU without Docker Desktop
-If you're running Docker Engine on Linux, without Docker Desktop, you must install statically compiled QEMU binaries and register them with binfmt_misc
-. This enables QEMU to execute non-native file formats for emulation. The QEMU binaries must be statically compiled and registered with the fix_binary flag. This requires a kernel version 4.8 or later, and binfmt-support version 2.1.7 or later.
+If you're running Docker Engine on Linux, without Docker Desktop, you must install statically compiled QEMU binaries and register them with binfmt_misc.
+This enables QEMU to execute non-native file formats for emulation. The QEMU binaries must be statically compiled and registered with the fix_binary flag.
+This requires a kernel version 4.8 or later, and binfmt-support version 2.1.7 or later.
 ```
 Ok, todo esto está muy bien, pero cómo hago para poder hacer correr docker en mi Mac M1 (en una MV de Linux) y docker se piense que está corriendo en una arquitectura AMD64? Pues lo que no esté en GITHUB no exite en mi parecer 😄.
 Solo teneis que seguir los paso detallados en éste repositorio de <a href="https://github.com/actions/runner-images/issues/2095">Github</a>.
