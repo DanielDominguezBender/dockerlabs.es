@@ -1,2 +1,58 @@
 # dockerlabs.es
 Aqui iré hackeando las diferentes máquinas que hay creadas en dockerlabs.es
+
+
+## Información para usuarios de Mac con chip M1,m2, etc
+
+Yo he querido ponerme a hackear máquinas después de unos meses de pausa de haberme sacado el Máster en Ciberseguridad y Privacidad. He optado por dockerlabs.es porque conocia de video tutoriales a Mario, su canal de Youtube (El pingüino de Maria) y su academia (por videos, no por que haya sido miembro, pero no descarto eso). En din, que me lío.
+Al querer empezar por el pirncipio y dedicarme a hackear las máquinas MUY FÁCILES, me di cuenta que al lanzar el script en Bash que Mario <b>elpinguinodemario</b> tan amablemente no ha perepadado, en mi caso no me devolvia al IP de la máquina en cuestion, con lo que comprendereis que se hace imposible realizar la fase de enumeración.
+
+<p align="center">
+  <img src="imgs/error_script_dockerlabs.es.png">
+</p>
+
+Después de mucho investigar y preguntar en discord (quiero dar las gracias <b>condor777</b> aquí también por echarme un cable con esto) no acababa de dar con la tecla adecuada.
+En algun foro de StackOverflow vi que se mencionaba el hecho de "forzar" la aqruitectura correcta a la hora de llamar el contenedor, esto se haria con ```--platform linux/amd64```, pero tampoco resultó ser muy útil, ya que si que es cierto que en algun momento me daba la IP, pero no era consistente.
+
+Rebuscando, y ahora pienso que deberia haber ido ahi directamente, en la web de ```docker.docs -> Manuals -> Multi-platform images``` se explica lo siguiente. Esta parte es una citación directa de la web de Docker.com:
+
+```
+QEMU without Docker Desktop
+If you're running Docker Engine on Linux, without Docker Desktop, you must install statically compiled QEMU binaries and register them with binfmt_misc
+. This enables QEMU to execute non-native file formats for emulation. The QEMU binaries must be statically compiled and registered with the fix_binary flag. This requires a kernel version 4.8 or later, and binfmt-support version 2.1.7 or later.
+```
+Ok, todo esto está muy bien, pero cómo hago para poder hacer correr docker en mi Mac M1 (en una MV de Linux) y se crea que está corriendo en una arquitectura AMD64? Pues lo que no esté en GITHUB no exite en mi parecer 😄.
+Solo teneis que seguir los paso detallados en éste repositorio de <a href="https://github.com/actions/runner-images/issues/2095">Github</a>.
+
+Básicamente teneis que lanzar el siguiente comando en la terminal:
+
+```linux
+sudo apt install --assume-yes binfmt-support qemu-user-static
+```
+
+Una vez esté todo instalado, lanzais el script de Bash como se menciona en las instrucciones de ```dockerlabs.es```y deberias poder ver la IP:
+
+<p align="center">
+  <img src="imgs/error_script_dockerlabs.es_2.png">
+</p>
+
+Para quitaros el warning lo único que teneis que hacer es adaptar el script en bash de la manera siguiente:
+
+```bash
+docker -run --platform linux/amd64 -d --name $CONTAINER_NAME $IMAGE_NAME > /dev/null
+```
+
+Os adjunto una imagen para que lo veais mejor:
+
+<p align="center">
+  <img src="imgs/error_script_dockerlabs.es_3.png">
+</p>
+
+Como veis tengo comentadas algunas líneas, es por el testing que estuve haciendo.
+
+<p align="center">
+  <img src="imgs/error_script_dockerlabs.es_4.png">
+</p>
+
+Y con esto ya no vereis más el warning y ya podeis empezar a hackear máquinas!!
+Gracias.
