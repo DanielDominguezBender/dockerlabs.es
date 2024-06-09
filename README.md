@@ -2,7 +2,7 @@
 Aqui iré hackeando las diferentes máquinas que hay creadas en dockerlabs.es
 
 
-## Información para usuarios de Mac con chip M1,m2, etc
+## Información para usuarios de Mac con chip M1,M2,etc
 
 Yo he querido ponerme a hackear máquinas después de unos meses de pausa de haberme sacado el Máster en Ciberseguridad y Privacidad. He optado por dockerlabs.es porque conocia de video tutoriales a Mario, su canal de Youtube (El pingüino de Maria) y su academia (por videos, no por que haya sido miembro, pero no descarto eso). En din, que me lío.
 Al querer empezar por el pirncipio y dedicarme a hackear las máquinas MUY FÁCILES, me di cuenta que al lanzar el script en Bash que Mario <b>elpinguinodemario</b> tan amablemente no ha perepadado, en mi caso no me devolvia al IP de la máquina en cuestion, con lo que comprendereis que se hace imposible realizar la fase de enumeración.
@@ -54,5 +54,8 @@ Como veis tengo comentadas algunas líneas, es por el testing que estuve haciend
   <img src="imgs/error_script_dockerlabs.es_4.png">
 </p>
 
-Y con esto ya no vereis más el warning y ya podeis empezar a hackear máquinas!!
-Gracias.
+Y con esto ya no vereis más el warning y ya podeis empezar a hackear máquinas!!<br>
+Gracias!! 😎
+
+>[!NOTE]
+> Con esto solo quiero añadir que no me quiero llevar el crédito que no me corresponde, esta información ya estaba a disposición de todos en internet, solo he querido recopilar la informacion y resumir los pasos para ayudar a personas con el mismo problema. 😅 (Mac Apple Silicon ...)
