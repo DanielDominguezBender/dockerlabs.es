@@ -5,7 +5,7 @@
 
 HedgeHog (DockerLabs) — Máquina Linux orientada a práctica de pentesting básica: escaneo de puertos, enumeración web y SSH, fuerza bruta con diccionarios adaptados, post-explotación y escalada de privilegios mediante uso de sudo y usuarios intermedios. En este laboratorio se detectaron puertos 22 (OpenSSH) y 80 (Apache), se identificó un usuario web/SSH (tails), se adaptó la wordlist rockyou para acelerar el ataque, se obtuvo acceso por SSH y se escaló a root aprovechando privilegios sudo sobre otro usuario (sonic).
 
-Link a máquina en DockerLabs -> [HedgeHog](https://dockerlabs.es/)
+Link a máquina en DockerLabs -> [HedgeHog](https://dockerlabs.es/)<br>
 Link a WriteUp completo -> [HedgeHog - WriteUp](https://github.com/DanielDominguezBender/dockerlabs.es/blob/main/HedgeHog/HedgeHog.pdf)
 
 ## Pasos clave:
