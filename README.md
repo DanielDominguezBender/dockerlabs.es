@@ -1,6 +1,4 @@
 # dockerlabs.es
-Aqui iré hackeando las diferentes máquinas que hay creadas en dockerlabs.es
-
 
 ## Información para usuarios de Mac con chip M1,M2,etc
 
